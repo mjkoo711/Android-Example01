@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:textSize="30dp"
+        android:textColor="#ff0000"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/text02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="안녕하세요~"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#0051ff"
+        android:layout_weight="10"/>
+
+    <TextView
+        android:id="@+id/text03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Good Morning!"
+        android:textSize="30dp"
+        android:background="#33ff00"
+        android:textColor="#fff200"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>

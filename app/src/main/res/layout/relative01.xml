@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/seoul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서울"
+        android:textSize="50dp"
+        />
+
+    <TextView
+        android:id="@+id/inchon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인천"
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/seoul"
+        />
+
+    <TextView
+        android:id="@+id/busan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="부산" android:textSize="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/geoje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="거제"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@id/busan"
+        android:layout_toLeftOf="@id/busan"
+        />
+</RelativeLayout>
