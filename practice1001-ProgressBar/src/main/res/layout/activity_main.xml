@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="my.kmucs.com.myapplication.MainActivity">
+
+    <!--
+    max : 최대치
+    progress : 기본값
+    secondaryProgress : 두번째 바의 기본값
+    clickable : 클릭이 가능하기안되냐
+    -->
+
+    <ProgressBar
+        android:id="@+id/pro01"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="10"
+        android:secondaryProgress="50"
+        android:clickable="false"/>
+
+    <ProgressBar
+        android:id="@+id/pro02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="increase 1st bar"
+            android:layout_weight="1"
+            android:background="#aaaaaa"/>
+
+        <Button
+            android:id="@+id/btn02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="increase 2nd bar"
+            android:layout_weight="1"
+            android:background="#aaaaaa"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>

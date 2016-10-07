@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="my.kmucs.com.myapplication.MainActivity">
+
+    <!--
+        isindicator : false(기본값)일 때에는 사용자가 드래그해서 변경가능
+        numStars : 전체 표시되는 별의 개수
+        rating : 최초 시작지 등급(개수)
+        stepSize : 움직이는 단위
+        max : 레이팅 최고수치, 위의 별의개수가 눈에 보여지는 거라면 max는 실제 값을 뜻함.
+            => 4개를 꽉 채워놓은 숫자는 6이라는 것을 의미
+    -->
+
+    <RatingBar
+        android:id="@+id/ratingBar01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:numStars="4"
+        android:rating="3"
+        android:stepSize="0.5"
+        android:max="6"/>
+
+    <TextView
+        android:id="@+id/tv01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="평점 : 3"
+        android:textSize="20dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="2"
+        android:isIndicator="true"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:rating="2.5"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBar04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:numStars="10"
+        android:rating="6"
+        style="?android:attr/ratingBarStyleSmall"/> <!-- 스타일을 먹으면 자동으로 isindicator를 막는다 그래서 따로 선언해줘야 -->
+
+    <RatingBar
+        android:id="@+id/ratingBar05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

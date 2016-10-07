@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':practice0903-Layout', ':practice0924-basicView', ':practice0924-javaBasic', ':practice0924-Toast', ':practice1001-Clock', ':practice1001-ListView', ':practice1001-Chronometer', ':practice1001-EventProcess', ':practice1001-Picker', ':practice1001-ProgressBar', ':practice1001-RatingBar', ':practice1001-SeekBar', ':practice1001-GCD'
