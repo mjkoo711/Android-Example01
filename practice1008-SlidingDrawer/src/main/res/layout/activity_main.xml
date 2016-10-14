@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="my.kmucs.com.myapplication.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아래쪽의 아이콘을 클릭/드래그하세요." />
+
+    <!-- content : 내용물
+        android:allowSingleTap="true" => True설정시 클릭으로도 열수있다. false일때는 드래그를 통해서만 열수 있다.
+        android:animateOnClick="true" => 클릭할 떄 매끄럽게 여는거 쓸때, 디폴트는 true
+        android:bottomOffset = "5dp" => 서랍을 닫을때 handle과 부모 아래쪽의 간격, 값이 커지면 handle이 아래로 내려감
+        android:contoent="@id/content" => 슬라이드 열었을 때 안의 내용물
+        android:handle="@+id/handle" => 핸들을 설정하는 속성
+        android:orientation="vertical" => 슬라이드의 방향 : 디폴트는 vertical, 가로열리는 것은 horizontal
+        android:topOffset="60dp" => 슬라이드를 열였을 때 부모 레이아웃과의 간격, 만약 0으로 했을씨 부모슬라이드를 모두 덥게 된다.
+        -->
+    <SlidingDrawer
+        android:id="@+id/slide01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:allowSingleTap="true"
+        android:animateOnClick="true"
+        android:bottomOffset="5dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle">
+
+        <ImageView
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="slidingDrawer의 content 부분"/>
+
+            <Button
+                android:id="@+id/btn01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닫기"/>
+
+
+        </LinearLayout>
+    </SlidingDrawer>
+</LinearLayout>

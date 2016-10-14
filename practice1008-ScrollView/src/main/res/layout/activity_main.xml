@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
+    tools:context="my.kmucs.com.myapplication.MainActivity">
+
+    <!--
+        ScaleType 속성
+            - CENTER : 이미지를 변형없이 중간에 위치
+            - CENTER_CROP : 이미지뷰의 높이, 넓이에 맞추어 이미지 크기를 비율에 맞게 꽉차도록 확대 또는 축소함
+            - CENTER_INSIDE : 이미지 뷰의 높이, 넓이에 맞추어 이미지 크기를 비율에 맞게 높이나 넓이에 맞추어 표시
+            - FIT_CENTER : 이미지 뷰에 맞게 이미지 비율에 맞추어 확대, 축소 되어 보임, 이미지가 중앙에 위치
+            - FIT_END : 이미지뷰에 맞게 이미지 비율에 맞추어 확대, 축소 되어보임, 이미지 하단에 위치
+            - FIT_START : 이미지뷰에 맞게 이미지 비율에 맞추어 확대, 축소하여 상단에 위치
+            - FIT_XY : 이미지뷰에 맞게 이미지 비율에 상관없이 틀에 꽉 차게해서 확대, 축소
+            - MATRIX : 이미지뷰의 좌측 상단을 기준을 보여짐, 이미지가 크면 짤림
+    -->
+
+    <!--
+        스크롤바스타일
+        SCROLLBARS_INSIDE-OVERLAY : 패딩 없이 내용물 안쪽에 배치
+        SCROLLBARS_INSIDE_INSET : 패딩 추가, 안쪽 배치
+        SCROLLBARS_OUTSIDE_OVERLAY : 패딩없이 가장자리 배치
+        SCROLLBARS_OUTSIDE_INSET : 패딩 추가, 가장자리 배치
+     -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@mipmap/a"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@mipmap/b"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@mipmap/c"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/a"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/b"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/c"/> <!-- 여기서 scaleType:CENTER하면 꽉찬다-->
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>
+

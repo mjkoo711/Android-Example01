@@ -23,7 +23,8 @@
         android:id="@+id/busan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="부산" android:textSize="50dp"
+        android:text="부산"
+        android:textSize="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         />

@@ -24,7 +24,7 @@
         android:max="100"
         android:progress="10"
         android:secondaryProgress="50"
-        android:clickable="false"/>
+        android:clickable="true"/>
 
     <ProgressBar
         android:id="@+id/pro02"

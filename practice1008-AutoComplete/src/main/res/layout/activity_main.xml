@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="my.kmucs.com.myapplication.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아래 에디트에 단어를 입력하세요."
+        android:textSize="30dp"/>
+
+    <!-- completionThreshold의 값은 숫자가 만약에 2이면 2글자를 치면 완성이나오게한다-->
+    <AutoCompleteTextView
+        android:id="@+id/autoCom01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="2"
+        android:completionHint="목록에서 원하는 단어를 선택하세요"/>
+</LinearLayout>
