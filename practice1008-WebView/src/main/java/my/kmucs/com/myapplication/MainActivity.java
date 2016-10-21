@@ -1,5 +1,6 @@
 package my.kmucs.com.myapplication;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnBack, btnFoward, btnGo;
@@ -68,6 +70,25 @@ public class MainActivity extends AppCompatActivity {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
             return true;
+        }
+
+        //페이지 로딩완료됬을떄 나오는 toast
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            super.onPageFinished(view, url);
+            Toast.makeText(getApplicationContext(), "FINISH", Toast.LENGTH_SHORT).show();
+            if(webview.canGoBack()){
+                btnBack.setBackgroundColor(Color.BLUE);
+            }else{
+                btnBack.setBackgroundColor(Color.LTGRAY);
+            }
+
+            if(webview.canGoForward()){
+                btnFoward.setBackgroundColor(Color.BLUE);
+            }
+            else{
+                btnFoward.setBackgroundColor(Color.LTGRAY);
+            }
         }
     }
 }
